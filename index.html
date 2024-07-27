@@ -13,21 +13,24 @@
 
 <body style="background-color:#9ec8ff;">
 
-
+<!--Claves botones -->
             <div class="btn-group container1" role="group" aria-label="Basic example">
                 <button type="button " class="btn btn-primary btn01" id="btRed" value="RED">RED <i class="bi bi-key"></i></button>
-                <button type="button " class="btn btn-primary btn01" id="btMss" value="M6">M6 <i class="bi bi-key"></i></button>
-                <button type="button " class="btn btn-primary btn01" id="btWts" value="WTS">WTS <i class="bi bi-key"></i></button>
+                <button type="button " class="btn btn-primary btn01" id="btEdatel" value="EDATEL">EDAT <i class="bi bi-key"></i></button>
+                <button type="button " class="btn btn-primary btn01" id="btEtp" value="ETP">ETP <i class="bi bi-key"></i></button>
+                <button type="button " class="btn btn-primary btn01" id="btElite" value="ELITE">ELIT <i class="bi bi-key"></i></button>
              </div>
 
-   
+<!--Primera linea -->
             <div class="btn-group container1" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary btn01" onclick="captura('sincronizacion');">SINCR</button>
-                <button type="button" class="btn btn-primary btn01" onclick="captura('instalacion');">INST</button>
+                <button type="button" class="btn btn-primary btn01" onclick="captura('55555');">55555</button>
+                <button type="button" class="btn btn-primary btn01" onclick="captura('AVAYA');">INST</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('cambio');">CAMBIO</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('reuso');">REUSO</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('consulta_equipo');">SN/MAC</button>
               </div>
+            
+<!--Segunda linea  -->              
             <div class="btn-group container1" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-primary btn01" onclick="captura('une');">UNE</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('000');">0000</button>
@@ -36,19 +39,47 @@
                 <button type="button" class="btn btn-primary btn01" onclick="fecha();">FECHA</button>
             </div>
 
-    
+<!--Numero de caso -->
         <div class="input-group container-input container1">
-            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Caso','btCaso','Caso')" id="btCaso">ID GDI</button>
-            <input type="text" class="form-control" placeholder="Numero de caso" aria-label="Recipient's username with two button addons" id="Caso">
+            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Caso','btCaso','Caso')" id="btCaso">INC</button>
+            <input type="text" class="form-control" placeholder="Numero de Incidente" aria-label="Recipient's username with two button addons" id="Caso">
             <button class="btn btn-danger" type="button" onclick="deliteTextbox('Caso')"><i class="bi bi-trash3-fill"></i></button>
             
         </div>
+
+<!--nombre -->
+        <div class="input-group container-input container1">
+            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Nombre')" id="btNombre">Nombre</button>
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="Recipient's username with two button addons" id="Nombre">
+            <button class="btn btn-danger" type="button" onclick="deliteTextbox('Nombre')"><i class="bi bi-trash3-fill"></i></button>
+            
+        </div>
+
+<!--Nit -->
+        <div class="input-group container-input container1 ">
+            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('CC','btCC','CC')" id="btCC">NIT</button>
+            <input type="text" class="form-control" placeholder="Cedula / nit  " aria-label="Recipient's username with two button addons" id="CC">
+            <button class="btn btn-danger" type="button" onclick="deliteTextbox('CC')"><i class="bi bi-trash3-fill"></i></button>
+            
+        </div>
+
+<!--ID llamada  -->
         <div class="input-group container-input container1">
             <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('IdLlamada','btLlamada','ID llamada')" id="btLlamada">ID llamada</button>
             <input type="text" class="form-control" placeholder="ID de llamada " aria-label="Recipient's username with two button addons" id="IdLlamada">
             <button class="btn btn-danger" type="button" onclick="deliteTextbox('IdLlamada')"><i class="bi bi-trash3-fill"></i></button>
             
         </div>
+
+<!--Celular -->
+        <div class="input-group container-input container1">
+            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Celular')" id="btCelular">Celular</button>
+            <input type="text" class="form-control" placeholder="Nuemro de Celular " aria-label="Recipient's username with two button addons" id="Celular">
+            <button class="btn btn-danger" type="button" onclick="deliteTextbox('Celular')"><i class="bi bi-trash3-fill"></i></button>
+            
+        </div>
+
+<!--ID servicio  -->
         <div class="input-group container-input container1">
             <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Legado','btIDServicio','ID servicio')" id="btIDServicio">ID servicio</button>
             <input type="text" class="form-control" placeholder="Id servicio " aria-label="Recipient's username with two button addons" id="Legado" onkeyup="mayus(this);">
@@ -57,62 +88,33 @@
             <button class="btn btn-danger" type="button" onclick="deliteTextbox('Legado','Legado2')" ><i class="bi bi-trash3-fill" ></i></button>
             
         </div>
+
+<!--swich mpls  -->
         <div class="input-group container-input container1">
-            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Gis','btGis','Gis')" id="btGis">ID GIS</button>
-            <input type="text" class="form-control" placeholder="Gis " aria-label="Recipient's username with two button addons" id="Gis">
-            <button class="btn btn-danger" type="button" onclick="deliteTextbox('Gis')"><i class="bi bi-trash3-fill"></i></button>
+            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('switch1')" id="btSwitch">SWITCH</button>
+
+            <input type="text" class="form-control" placeholder="switch " aria-label="Recipient's username with two button addons" id="switch1" onkeyup="mayus(this);">
+
+            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('NE')" id="btNe" style="width: 30px; padding: 0px;">NE</button>
+
+            <input type="text" class="form-control" placeholder="MPLS" aria-label="Recipient's username with two button addons" id="NE" onkeyup="mayus(this);">
+
+            <button class="btn btn-danger" type="button" onclick="deliteTextbox('switch1','NE')" ><i class="bi bi-trash3-fill" ></i></button>
             
         </div>
-        <div class="input-group container-input container1 ">
-            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('CC','btCC','CC')" id="btCC">CC/NIT</button>
-            <input type="text" class="form-control" placeholder="Cedula / nit  " aria-label="Recipient's username with two button addons" id="CC">
-            <button class="btn btn-danger" type="button" onclick="deliteTextbox('CC')"><i class="bi bi-trash3-fill"></i></button>
-            
-        </div>
-        <div class="input-group container-input container1">
-            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Entra','btEntra','Entra')" id="btEntra">Entra</button>
-            <input type="text" class="form-control" placeholder="Equipo entrante" aria-label="Recipient's username with two button addons" id="Entra" onkeyup="mayus(this);">
-            <button class="btn btn-danger" type="button" onclick="deliteTextbox('Entra')"><i class="bi bi-trash3-fill"></i></button>
-            
-        </div>
-        <div class="input-group container-input container1">
-            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Sale','btSale','Sale')" id="btSale">Sale</button>
-            <input type="text" class="form-control" placeholder="Equipo saliente" aria-label="Recipient's username with two button addons" id="Sale" onkeyup="mayus(this);">
-            <button class="btn btn-danger" type="button" onclick="deliteTextbox('Sale')"><i class="bi bi-trash3-fill"></i></button>
-         
-        </div>
+
+
+
+
+
+        
+
         <div class="input-group container-input container1">
             <button type="button " class="btn btn-success" onclick="copyToClipBoard('observaciones','btGuion','Guion')" id="btGuion">Guion</button>
             <select class="form-select" aria-label="Default select example" onchange="selecion()" id="guiones">
                 <option value="s">--Guiones--</option>
-                <option value=0>Ingreso de equipo</option>
+                <option value=0>RESOLUCIÓN</option>
                 <option value="1">Cantidad de equipos</option>
-                <option value="2">SERIAL/MAC invalido</option>
-                <option value="3">Equipo en otro ID servicio</option>
-                <option value="26">Equipo ya esta en OSS</option>
-                <option value="4">CR para cierre de pedido</option>
-                <option value="5">ID servicio invalido</option>
-                <option value="6">PUMED/Pedidos en proceso</option>
-                <option value="7">Elite</option>
-                <option value="8">Gpon/Pymes/C3/Redco</option>
-                <option value="9">Sin ID servicio</option>
-                <option value="10">Crear cuenta en Verimatrix</option>
-                <option value="11">RETIRO EN PROCESO</option>
-                <option value="12">Ingreso equipo con pedidos en tramite</option>
-                <option value="13">Servicio retirado</option>
-                <option value="14">TOIP- reaprovicionar/lideres</option>
-                <option value="15">Equipo con diferente SN</option>
-                <option value="16">Suspendido por falta de pago</option>
-                <option value="17">Litte en nov android trio</option>
-                <option value="18">Equipo a retirar no esta en oss</option>
-                <option value="19">Direrente promocion asociada</option>
-                <option value="20">Sin ID llamada</option>
-                <option value="21">TO-BA/Pymes asociar infraestructura</option>
-                <option value="22">Cargar canales de tv </option>
-                <option value="23">Cantidad a retirar no coincide</option>
-                <option value="24">Solicitud de reconexion</option>
-                <option value="25">Equipo en OSS con pedidos en tramite</option>
-                <option value="27">Cantidad a ingresar mayor a la contratada</option>
               </select>
               <button class="btn btn-danger" type="button" onclick="deliteTextbox('Entra')" id="btnDeleteGuiones"><i class="bi bi-trash3-fill"></i></button>
         </div>
@@ -157,23 +159,29 @@
                 <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Establecer contraseñas</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
+            <div class="container">
     
                 RED <i class="bi bi-key"></i>
                 <input type="password" id="passRed" class="form-control" aria-labelledby="passwordHelpBlock">
     
-                MSS <i class="bi bi-key"></i>
-                <input type="password" id="passMss" class="form-control" aria-labelledby="passwordHelpBlock">
-                <div id="passwordHelpBlock" class="form-text">
+                EDATEL <i class="bi bi-key"></i>
+                <input type="password" id="passEda" class="form-control" aria-labelledby="passwordHelpBlock">
+
+                ETP <i class="bi bi-key"></i>
+                <input type="password" id="passEtp" class="form-control" aria-labelledby="passwordHelpBlock">
+
+                ELITE <i class="bi bi-key"></i>
+                <input type="password" id="passElite" class="form-control" aria-labelledby="passwordHelpBlock">
     
-                    WTS <i class="bi bi-key"></i>
-                    <input type="password" id="passWts" class="form-control" aria-labelledby="passwordHelpBlock">
-    
-                    Su contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener
-                    espacios, o emoji.
+                Su contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener
+                espacios, o emoji.
                 </div>
-                <button type="button" class="btn btn-primary" id="btSavePass"
+
+                <div class="container">
+                    <button type="button" class="btn btn-primary" id="btSavePass"
                     data-bs-dismiss="offcanvas">Establecer</button>
+                </div>
+                
 
 
                 <div class="containarPedido">
@@ -193,7 +201,10 @@
     
 
 
-    
+    <input id="55555" type="hidden" value="55555">
+    <input id="AVAYA" type="hidden" value="51116">
+
+
     <input id="sincronizacion" type="hidden" value="SINCRONIZACION">
     <input id="instalacion" type="hidden" value="INST-EQUIPO">
     <input id="cambio" type="hidden" value="CAMBIO-EQUIPO">
