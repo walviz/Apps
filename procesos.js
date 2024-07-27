@@ -80,8 +80,6 @@ function borrarTodo(){
 function capturarTodo() {
   let caso = document.getElementById("Caso").value;
   let llamada = document.getElementById("IdLlamada").value;
-  let legado = document.getElementById("Legado").value;
-  let gis = document.getElementById("Gis").value;
   let cc = document.getElementById("CC").value;
   let observaciones = document.getElementById("observaciones").value;
   let fecha = new Date();
@@ -91,8 +89,6 @@ function capturarTodo() {
     "Fecha: " + converMonth(fecha.getMonth()) +"-" +diaFecha(fecha.getDate()) +"\n" +
     "ID GDI: " + caso + "\n" +
     "ID llamada: " +  llamada + "\n" +
-    "ID servicio: " + legado +"\n" +
-    "ID Gis: " +gis +"\n" +
     "Cedula: " +cc +"\n" +
     "Observaciones: " + observaciones + "\n" +
     "Login: Walvizva";
@@ -138,16 +134,12 @@ function capturarTodoM6(){
   document.getElementById("btMssP").innerHTML ="Generado!";
   let caso = document.getElementById("Caso").value;
   let llamada = document.getElementById("IdLlamada").value;
-  let legado = document.getElementById("Legado").value;
-  let gis = document.getElementById("Gis").value;
   let cc = document.getElementById("CC").value;
   let fecha = new Date();
   document.getElementById("plantilla").value =
     "Fecha: " + converMonth(fecha.getMonth()) +"-" +diaFecha(fecha.getDate()) +"\n" +
     "ID GDI: " + caso + "\n" +
     "ID llamada: " +  llamada + "\n" +
-    "ID servicio: " + legado +"\n" +
-    "ID Gis: " +gis +"\n" +
     "Cedula: " +cc +"\n" +
     "Login: Walvizva";
     copyToClipBoard("plantilla");
@@ -182,16 +174,41 @@ function selecion(){
   let opcion = document.getElementById("guiones").value;
 
   var input = document.getElementById("observaciones");
-
+/*input.focus();*/
+/*copyToClipBoard("observaciones");*/
   switch(opcion){
     case "0":
-      document.getElementById("observaciones").value ="La causa fue: "+"\n"+
-"La solución fue: ";
-      input.focus();
+      document.getElementById("observaciones").value ="La causa fue: "+"\n"+"La solución fue: ";
+      // Colocar el foco después de "La causa fue: "
+      observaciones.focus();
+      observaciones.selectionStart = observaciones.selectionEnd = observaciones.value.indexOf("La causa fue: ") + "La causa fue: ".length;
+      
       break;   
     case "1":
-      document.getElementById("observaciones").value = "Buen día, No se actualiza equipo porque no nos suministra cual es el equipo que sale en reemplazo del que entra, ya que cliente cuenta en oss con la misma cantidad de equipos  que la contratada ";
-      copyToClipBoard("observaciones");
+      document.getElementById("observaciones").value = "S. Básico"+"\n"+
+      "\t" + "ID prueba: " + "N/A" + "\n" +
+      "\t" + "Falla evidencia en la prueba: " +"N/A"+ "\n" +
+      "\t" + "Diagnóstico realizado: " + "\n" +"\n" +
+
+      "S3GU1M13NT0_N1:d1agnostico";
+      // Colocar el foco después de "Diagnóstico realizado: "
+      observaciones.focus();
+      observaciones.selectionStart = observaciones.selectionEnd = observaciones.value.indexOf("Diagnóstico realizado: ") + "Diagnóstico realizado: ".length;
+      
+      break;
+
+    case "2":
+      document.getElementById("observaciones").value = "S. Avanzado:"+"\n"+
+      "\t" + "Conclusión al ejecutar lista de chequeo: " + "\n" +
+      "\t" + "Numeral donde se evidencia falla en la lista de chequeo: "+ "\n" +
+      "\t" + "Diagnóstico realizado: "+ "\n" +
+      "\t" + "Falla eléctrica S/N: N" + "\n" +"\n" +
+
+      "S3GU1M13NT0_N1:d1agnostico";
+      // Colocar el foco después de "Diagnóstico realizado: "
+      observaciones.focus();
+      observaciones.selectionStart = observaciones.selectionEnd = observaciones.value.indexOf("Diagnóstico realizado: ") + "Diagnóstico realizado: ".length;
+      
       break;
 
     default: false;
@@ -232,15 +249,15 @@ function cargarValores() {
     
   }
   if (saveEda) {
-    document.getElementById("passWts").value = saveEda;
+    document.getElementById("passEda").value = saveEda;
     
   }
   if (saveEtp) {
-    document.getElementById("passMss").value = saveEtp;
+    document.getElementById("passEtp").value = saveEtp;
     
   }
   if (saveElite) {
-    document.getElementById("passMss").value = saveElite;
+    document.getElementById("passElite").value = saveElite;
     
   }
 }

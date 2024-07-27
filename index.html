@@ -24,15 +24,15 @@
 <!--Primera linea -->
             <div class="btn-group container1" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-primary btn01" onclick="captura('55555');">55555</button>
-                <button type="button" class="btn btn-primary btn01" onclick="captura('AVAYA');">INST</button>
-                <button type="button" class="btn btn-primary btn01" onclick="captura('cambio');">CAMBIO</button>
-                <button type="button" class="btn btn-primary btn01" onclick="captura('reuso');">REUSO</button>
-                <button type="button" class="btn btn-primary btn01" onclick="captura('consulta_equipo');">SN/MAC</button>
+                <button type="button" class="btn btn-primary btn01" onclick="captura('AVAYA');">AVAYA</button>
+                <button type="button" class="btn btn-primary btn01" onclick="captura('WALVIZVA');">WALVIZVA</button>
+                <button type="button" class="btn btn-primary btn01" onclick="captura('walvizva');">walvizva</button>
+                <button type="button" class="btn btn-primary btn01" onclick="captura('consulta_equipo');">ConsulEq</button>
               </div>
             
 <!--Segunda linea  -->              
             <div class="btn-group container1" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary btn01" onclick="captura('une');">UNE</button>
+                <button type="button" class="btn btn-primary btn01" onclick="captura('ELITE');">ELITE</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('000');">0000</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('retequipo');">RET-EQ</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('ubi');">UBICG</button>
@@ -114,7 +114,8 @@
             <select class="form-select" aria-label="Default select example" onchange="selecion()" id="guiones">
                 <option value="s">--Guiones--</option>
                 <option value=0>RESOLUCIÓN</option>
-                <option value="1">Cantidad de equipos</option>
+                <option value="1">N1-DIAG. BÁSICO(interno)</option>
+                <option value="2">N1-DIAG. AVANZADO(interno)</option>
               </select>
               <button class="btn btn-danger" type="button" onclick="deliteTextbox('Entra')" id="btnDeleteGuiones"><i class="bi bi-trash3-fill"></i></button>
         </div>
@@ -203,6 +204,9 @@
 
     <input id="55555" type="hidden" value="55555">
     <input id="AVAYA" type="hidden" value="51116">
+    <input id="ELITE" type="hidden" value="ELITE">
+    <input id="WALVIZVA" type="hidden" value="WALVIZVA">
+    <input id="walvizva" type="hidden" value="walvizva">
 
 
     <input id="sincronizacion" type="hidden" value="SINCRONIZACION">
