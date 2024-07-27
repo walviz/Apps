@@ -50,7 +50,7 @@
 <!--nombre -->
         <div class="input-group container-input container1">
             <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Nombre')" id="btNombre">Nombre</button>
-            <input type="text" class="form-control" placeholder="Nombre" aria-label="Recipient's username with two button addons" id="Nombre">
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="Recipient's username with two button addons" id="Nombre" onkeyup="mayus(this);">
             <button class="btn btn-danger" type="button" onclick="deliteTextbox('Nombre')"><i class="bi bi-trash3-fill"></i></button>
             
         </div>
