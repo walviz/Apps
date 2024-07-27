@@ -16,6 +16,7 @@ limpiarEntrada(Legado);
 limpiarEntrada(Legado2);
 limpiarEntrada(switch1);
 limpiarEntrada(NE);
+limpiarEntrada(Correo);
 function limpiarEntrada(input) {
   input.addEventListener("input", e => {
     let string = e.target.value;
@@ -67,7 +68,7 @@ function deliteTextbox(param,param2){
 
 //borra todo
 function borrarTodo(){
-  var elementos= ["Caso","Nombre","IdLlamada","switch1","NE","Celular","Legado","CC","Legado2","observaciones","nota",];
+  var elementos= ["Caso","Nombre","IdLlamada","switch1","NE","Celular","Legado","CC","Legado2","observaciones","nota","Correo"];
 
   for(let i=0;i<elementos.length;i++){
     var item=elementos[i];
