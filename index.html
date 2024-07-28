@@ -28,6 +28,7 @@
                 <button type="button" class="btn btn-primary btn01" onclick="captura('AVAYA');">AVAYA</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('WALVIZVA');">WALVIZVA</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('walvizva');">walvizva</button>
+                <button type="button" class="btn btn-primary btn01" id="btnCpe">ONT#</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('consulta_equipo');">ConsulEq</button>
               </div>
             
@@ -36,7 +37,8 @@
                 <button type="button" class="btn btn-primary btn01" onclick="captura('ELITE');">ELITE</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('*NMC*');">*NMC*</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('arroba');">walvizva@</button>
-                <button type="button" class="btn btn-primary btn01" onclick="captura('ubi');">UBICG</button>
+                <button type="button " class="btn btn-primary btn01" id="btClaveArris" value="claveArris">ClaveA <i class="bi bi-key"></i></button>
+                <button type="button" class="btn btn-primary btn01" id="btnMac" >CPE#</button>
                 <button type="button" class="btn btn-primary btn01" onclick="fecha();">FECHA</button>
             </div>
 
@@ -225,8 +227,9 @@
     <input id="consulta_equipo" type="hidden" value="http://10.100.66.199:8082/RepEquiposDireccion.aspx">
     <input id="ubi" type="hidden" value="UBICGENCPE">
     
-   
+    <script src="arris.js"></script>
     <script src="procesos.js"></script>
+    <script src="mac.js"></script>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     
 </body>
