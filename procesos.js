@@ -86,20 +86,9 @@ function borrarTodo(){
 
 //generar
 function capturarTodo() {
-  let caso = document.getElementById("Caso").value;
-  let llamada = document.getElementById("IdLlamada").value;
-  let cc = document.getElementById("CC").value;
   let observaciones = document.getElementById("observaciones").value;
-  let fecha = new Date();
   //enviar toda la informacion capturada  a la plantilla
-  document.getElementById("plantilla").value =
-    "\n" +
-    "Fecha: " + converMonth(fecha.getMonth()) +"-" +diaFecha(fecha.getDate()) +"\n" +
-    "ID GDI: " + caso + "\n" +
-    "ID llamada: " +  llamada + "\n" +
-    "Cedula: " +cc +"\n" +
-    "Observaciones: " + observaciones + "\n" +
-    "Login: Walvizva";
+  document.getElementById("plantilla").value = observaciones;
   copyToClipBoard("plantilla");
   document.getElementById("btGenerar").innerHTML ="Generado!";
   setTimeout(resGenerar,1000);
