@@ -119,23 +119,6 @@ if(dia<10){
 }
 }
 
-//para plantilla M6
-function capturarTodoM6(){
-  document.getElementById("btMssP").innerHTML ="Generado!";
-  let caso = document.getElementById("Caso").value;
-  let llamada = document.getElementById("IdLlamada").value;
-  let cc = document.getElementById("CC").value;
-  let fecha = new Date();
-  document.getElementById("plantilla").value =
-    "Fecha: " + converMonth(fecha.getMonth()) +"-" +diaFecha(fecha.getDate()) +"\n" +
-    "ID GDI: " + caso + "\n" +
-    "ID llamada: " +  llamada + "\n" +
-    "Cedula: " +cc +"\n" +
-    "Login: Walvizva";
-    copyToClipBoard("plantilla");
-    setTimeout(resMSS,1000);
-}
-
 
 //guiones CRs
 function selecionCr(){
