@@ -58,6 +58,13 @@ function copyToClipBoard(parametro) {
   },400)*/
 }
 
+// capturar sintexto
+function captura(parametro) {
+  var codigoACopiar = document.getElementById(parametro);
+  navigator.clipboard.writeText(codigoACopiar.value);
+}
+
+
 //borra un solo texto
 function deliteTextbox(param,param2){
   document.getElementById(param).value = "";
@@ -106,13 +113,6 @@ function resGenerar(){
 
 function resMSS(){
   document.getElementById("btMssP").innerHTML ="MSS"
-}
-
-
-// capturar sintexto
-function captura(parametro) {
-  var codigoACopiar = document.getElementById(parametro);
-  navigator.clipboard.writeText(codigoACopiar.value);
 }
 
 //convertir numero del mes en mes texto
@@ -173,8 +173,11 @@ function selecionCr(){
 //guiones select
 function selecion(){
   let opcion = document.getElementById("guiones").value;
+  let nombre = document.getElementById("Nombre").value;
+  let celular = document.getElementById("Celular").value;
+  let idLlamada = document.getElementById("IdLlamada").value;
 
-  var input = document.getElementById("observaciones");
+
 /*input.focus();*/
 /*copyToClipBoard("observaciones");*/
   switch(opcion){
@@ -184,7 +187,8 @@ function selecion(){
       observaciones.focus();
       observaciones.selectionStart = observaciones.selectionEnd = observaciones.value.indexOf("La causa fue: ") + "La causa fue: ".length;
       
-      break;   
+      break;  
+
     case "1":
       document.getElementById("observaciones").value = "S. Básico"+"\n"+
       "\t" + "ID prueba: " + "N/A" + "\n" +
@@ -211,6 +215,41 @@ function selecion(){
       observaciones.selectionStart = observaciones.selectionEnd = observaciones.value.indexOf("Diagnóstico realizado: ") + "Diagnóstico realizado: ".length;
       
       break;
+
+    case "3":
+      
+      document.getElementById("observaciones").value = "De acuerdo a la comunicación establecida Nombre: "+nombre+", Teléfono: "+celular+" hemos registrado su llamada con el siguiente avance: "+ "\n" +"\n" +
+      "Seguiremos gestionando su caso en pro de una solución oportuna."+ "\n" +"\n" +
+      "ID llamada: " +idLlamada+ "\n" +"\n" +
+
+      "S3GU1M13NT0_N1:llamadadelcliente";
+
+      // Colocar el foco después del contenido específico
+      observaciones.focus();
+      var content = "De acuerdo a la comunicación establecida Nombre: " + nombre + ", Teléfono: " + celular + " hemos registrado su llamada con el siguiente avance: ";
+      observaciones.selectionStart = observaciones.selectionEnd = observaciones.value.indexOf(content) + content.length;
+      break;
+
+    case "4":
+      document.getElementById("observaciones").value = "De acuerdo a la comunicación establecida Nombre: "+nombre+", Teléfono: "+celular+" "+ "\n" +"\n" +
+      "Seguiremos gestionando su caso en pro de una solución oportuna."+ "\n" +"\n" +
+      "ID llamada: " +idLlamada+ "\n" +"\n" +
+
+      "S3GU1M13NT0_N1:llamadaalcliente";
+      
+      // Colocar el foco después del contenido específico
+      observaciones.focus();
+      var content = "De acuerdo a la comunicación establecida Nombre: " + nombre + ", Teléfono: " + celular + " ";
+      observaciones.selectionStart = observaciones.selectionEnd = observaciones.value.indexOf(content) + content.length;
+      break;
+
+    case "5":
+      document.getElementById("observaciones").value ="Disponibilidad: lunes a viernes de 8:00am a 5:00pm, sábado de 8:00am a 12:00pm "+"\n"+"Persona quien atiende: "+ nombre + "\n"+"Teléfono: "+ celular +"\n"+"Observaciones: Estar carnetizado, ";
+      // Colocar el foco después de "La causa fue: "
+      observaciones.focus();
+      observaciones.selectionStart = observaciones.selectionEnd = observaciones.value.indexOf("Observaciones: Estar carnetizado, ") + "Observaciones: Estar carnetizado, ".length;
+      
+      break;  
 
     default: false;
   }}

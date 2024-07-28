@@ -34,7 +34,7 @@
 <!--Segunda linea  -->              
             <div class="btn-group container1" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-primary btn01" onclick="captura('ELITE');">ELITE</button>
-                <button type="button" class="btn btn-primary btn01" onclick="captura('000');">0000</button>
+                <button type="button" class="btn btn-primary btn01" onclick="captura('*NMC*');">*NMC*</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('retequipo');">RET-EQ</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('ubi');">UBICG</button>
                 <button type="button" class="btn btn-primary btn01" onclick="fecha();">FECHA</button>
@@ -58,7 +58,7 @@
 
 <!--Nit -->
         <div class="input-group container-input container1 ">
-            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('CC','btCC','CC')" id="btCC">NIT</button>
+            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('CC','btCC','CC')" id="btCC" >NIT</button>
             <input type="text" class="form-control" placeholder="Cedula / nit  " aria-label="Recipient's username with two button addons" id="CC">
             <button class="btn btn-danger" type="button" onclick="deliteTextbox('CC')"><i class="bi bi-trash3-fill"></i></button>
             
@@ -111,13 +111,8 @@
             <button class="btn btn-danger" type="button" onclick="deliteTextbox('switch1','NE')" ><i class="bi bi-trash3-fill" ></i></button>
             
         </div>
-
-
-
-
-
         
-
+<!--Despegable  -->
         <div class="input-group container-input container1">
             <button type="button " class="btn btn-success" onclick="copyToClipBoard('observaciones','btGuion','Guion')" id="btGuion">Guion</button>
             <select class="form-select" aria-label="Default select example" onchange="selecion()" id="guiones">
@@ -125,6 +120,9 @@
                 <option value=0>RESOLUCIÓN</option>
                 <option value="1">N1-DIAG. BÁSICO(interno)</option>
                 <option value="2">N1-DIAG. AVANZADO(interno)</option>
+                <option value="3">N1-LLAMADA-ENTRANTE(Public)</option>
+                <option value="4">N1-LLAMADA-SALIENTE(Public)</option>
+                <option value="5">AGENDAMIENTO</option>
               </select>
               <button class="btn btn-danger" type="button" onclick="deliteTextbox('Entra')" id="btnDeleteGuiones"><i class="bi bi-trash3-fill"></i></button>
         </div>
@@ -160,9 +158,7 @@
                 
 
 
-<!-- menu opciones -->
-    
-    
+<!-- menu opciones -->  
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
             aria-labelledby="offcanvasWithBothOptionsLabel">
             <div class="offcanvas-header">
@@ -216,6 +212,7 @@
     <input id="ELITE" type="hidden" value="ELITE">
     <input id="WALVIZVA" type="hidden" value="WALVIZVA">
     <input id="walvizva" type="hidden" value="walvizva">
+    <input id="*NMC*" type="hidden" value="*NMC*">
 
 
     <input id="sincronizacion" type="hidden" value="SINCRONIZACION">
