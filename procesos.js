@@ -238,13 +238,15 @@ function savePass() {
   let saveEda = document.getElementById("passEda").value;
   let saveEtp = document.getElementById("passEtp").value;
   let saveElite = document.getElementById("passElite").value;
+  let saveFenix = document.getElementById("passFenix").value;
 
   localStorage.setItem("red", savered);
   localStorage.setItem("eda", saveEda);
   localStorage.setItem("etp", saveEtp);
   localStorage.setItem("elite", saveElite);
+  localStorage.setItem("fenix", saveFenix);
 
-  console.log(localStorage.getItem("red","eda","etp","elite"));
+  console.log(localStorage.getItem("red","eda","etp","elite","fenix"));
 }
 
 //cargar info en input de opciones
@@ -255,6 +257,7 @@ function cargarValores() {
   var saveEda = localStorage.getItem("eda");
   var saveEtp = localStorage.getItem("etp");
   var saveElite = localStorage.getItem("elite");
+  var saveFenix = localStorage.getItem("fenix");
 
   if (savedRed) {
     document.getElementById("passRed").value = savedRed;
@@ -272,6 +275,10 @@ function cargarValores() {
     document.getElementById("passElite").value = saveElite;
     
   }
+  if (saveFenix) {
+    document.getElementById("passFenix").value = saveFenix;
+    
+  }
 }
 
 
@@ -281,6 +288,7 @@ document.getElementById("btRed").addEventListener("click", () => asignarCopiar("
 document.getElementById("btEdatel").addEventListener("click", () => asignarCopiar("eda"));
 document.getElementById("btEtp").addEventListener("click", () => asignarCopiar("etp"));
 document.getElementById("btElite").addEventListener("click", () => asignarCopiar("elite"));
+document.getElementById("btFenix").addEventListener("click", () => asignarCopiar("fenix"));
 
 
 
