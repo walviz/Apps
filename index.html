@@ -31,7 +31,6 @@
                 <button type="button" class="btn btn-primary btn01" onclick="captura('walvizva');">walvizva</button>
                 <button type="button" class="btn btn-primary btn01" onclick="captura('arroba');">walvizva@</button>              
                 <button type="button" class="btn btn-primary btn01" onclick="captura('consulta_equipo');">ConsulEq</button>
-                <button type="button" class="btn btn-primary btn01" id="captureBtn">Capture</button>
                 <canvas id="canvas" style="display:none;"></canvas>
               </div>
             
@@ -132,26 +131,29 @@
               <button class="btn btn-danger" type="button" onclick="deliteTextbox('Entra')" id="btnDeleteGuiones"><i class="bi bi-trash3-fill"></i></button>
         </div>
     
-  <!--Observaciones  -->  
-        <div class="container1">
-            <textarea class="form-control" id="observaciones" name="observaciones" rows="10"></textarea>
+
+
+         <!--Notas adicionales   -->    
+         <div class="container1">
+            <textarea class="form-control" id="nota" rows="10" name="nota" placeholder="Notas adicionales">Usuaria se contacta indicando que </textarea>
         </div>
+ 
     
 
-          
+   <!--Botones borrar generar  -->        
             <div class="btn-group container1" role="group" aria-label="Basic example">
                 <button type="button " class="btn btn-danger" onclick="borrarTodo();" id="btBorrarTodo">Borrar </button>
                 <button type="button " class="btn btn-primary btn01" onclick="capturarTodo();" id="btGenerar">Generar</button>
             </div>   
 
     
-    
-        <div class="container1">
-            <textarea class="form-control" id="nota" rows="10" name="nota" placeholder="Notas adicionales"></textarea>
-        </div>
+ <!--Observaciones  -->  
+ <div class="container1">
+    <textarea class="form-control" id="observaciones" name="observaciones" rows="10"></textarea>
+</div>
 
 
-   
+   <!--Plantilla no modificable  --> 
         <div class="container1">
             <textarea class="form-control" id="plantilla" rows="5" name="plantilla" readonly></textarea>
         </div>
