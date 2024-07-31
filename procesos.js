@@ -75,13 +75,14 @@ function deliteTextbox(param,param2){
 
 //borra todo
 function borrarTodo(){
-  var elementos= ["Caso","Nombre","IdLlamada","switch1","NE","Celular","Legado","CC","Legado2","observaciones","nota","Correo"];
+  var elementos= ["Caso","Nombre","IdLlamada","switch1","NE","Celular","Legado","CC","Legado2","observaciones","nota","Correo","Direccion"];
 
   for(let i=0;i<elementos.length;i++){
     var item=elementos[i];
     document.getElementById(item).value = "";
   }
   document.getElementById("guiones").selectedIndex = "";
+  document.getElementById("nota").value = "Usuaria se contacta indicando que ";
 }
 
 //generar

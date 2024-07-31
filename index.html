@@ -92,6 +92,15 @@
     
 </div>
 
+
+<!--Direccion  -->
+<div class="input-group container-input container1">
+    <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Direccion')" id="btCorreo">Direcci</button>
+    <input type="text" class="form-control" placeholder="Direccion " aria-label="Recipient's username with two button addons" id="Direccion">
+    <button class="btn btn-danger" type="button" onclick="deliteTextbox('Direccion')"><i class="bi bi-trash3-fill"></i></button>
+    
+</div>
+
 <!--ID servicio  -->
         <div class="input-group container-input container1">
             <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Legado','btIDServicio','ID servicio')" id="btIDServicio">ID servicio</button>
@@ -116,7 +125,21 @@
             
         </div>
         
-<!--Despegable  -->
+
+    
+
+
+         <!--Notas adicionales   -->    
+         <div class="container1">
+            <textarea class="form-control" id="nota" rows="10" name="nota" placeholder="Notas adicionales">Usuaria se contacta indicando que </textarea>
+        </div>
+ 
+    
+
+    
+
+
+            <!--Despegable  -->
         <div class="input-group container-input container1">
             <button type="button " class="btn btn-success" onclick="copyToClipBoard('observaciones','btGuion','Guion')" id="btGuion">Guion</button>
             <select class="form-select" aria-label="Default select example" onchange="selecion()" id="guiones">
@@ -130,21 +153,13 @@
               </select>
               <button class="btn btn-danger" type="button" onclick="deliteTextbox('Entra')" id="btnDeleteGuiones"><i class="bi bi-trash3-fill"></i></button>
         </div>
-    
 
 
-         <!--Notas adicionales   -->    
-         <div class="container1">
-            <textarea class="form-control" id="nota" rows="10" name="nota" placeholder="Notas adicionales">Usuaria se contacta indicando que </textarea>
-        </div>
- 
-    
-
-   <!--Botones borrar generar  -->        
-            <div class="btn-group container1" role="group" aria-label="Basic example">
-                <button type="button " class="btn btn-danger" onclick="borrarTodo();" id="btBorrarTodo">Borrar </button>
-                <button type="button " class="btn btn-primary btn01" onclick="capturarTodo();" id="btGenerar">Generar</button>
-            </div>   
+         <!--Botones borrar generar  -->        
+         <div class="btn-group container1" role="group" aria-label="Basic example">
+            <button type="button " class="btn btn-danger" onclick="borrarTodo();" id="btBorrarTodo">Borrar </button>
+            <button type="button " class="btn btn-primary btn01" onclick="capturarTodo();" id="btGenerar">Generar</button>
+        </div> 
 
     
  <!--Observaciones  -->  
