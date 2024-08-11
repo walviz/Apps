@@ -62,11 +62,28 @@
 
 <!--Nit -->
         <div class="input-group container-input container1 ">
-            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('CC','btCC','CC')" id="btCC" >NIT</button>
-            <input type="text" class="form-control" placeholder="Cedula / nit  " aria-label="Recipient's username with two button addons" id="CC">
-            <button class="btn btn-danger" type="button" onclick="deliteTextbox('CC')"><i class="bi bi-trash3-fill"></i></button>
+            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('dian1','btCC','CC')" id="btCC"style="width: 50px; padding: 0px;"  >NIT</button>
+            <button class="btn btn-primary btn01" type="button" onclick="cm1_c1c()"  style="width: 50px; padding: 0px;" value="Dig">Dig </button>
+
+            <input type="text" class="form-control w-50" placeholder="Cedula / nit  " onkeyup="cm1_tecla2()" onpaste="cm1_tecla2()" id="dian1">
+
+            <input type="text" id="dian2" class="form-control " style="width:15px; font-size:16px;" maxlength="15" >
+
+            <button class="btn btn-danger" type="button" onclick="deliteTextbox('dian1','dian2')"><i class="bi bi-trash3-fill"></i></button>
+            
+            <input type="text" id="dian3" style="position:absolute; margin-top: -100000px; width:150px; font-size:16px;" maxlength="15" >
             
         </div>
+        
+
+           <!-- <input type="text" id="dian1" onkeyup="cm1_tecla2()" onpaste="cm1_tecla2()" ; style="width:150px; font-size:16px;" maxlength="15">-->
+
+            <!-- <input type="text" id="dian2" style="width:15px; font-size:16px;" maxlength="15" >-->
+          
+           
+            
+                    
+
 
 <!--ID llamada  -->
         <div class="input-group container-input container1">
@@ -136,7 +153,12 @@
  
     
 
-    
+     <!--Botones borrar generar  -->        
+     <div class="btn-group container1" role="group" aria-label="Basic example">
+        <button type="button " class="btn btn-danger" onclick="borrarTodo();" id="btBorrarTodo">Borrar </button>
+        <button type="button " class="btn btn-primary btn01" onclick="capturarTodo();" id="btGenerar">Generar</button>
+    </div> 
+
 
 
             <!--Despegable  -->
@@ -155,12 +177,7 @@
         </div>
 
 
-         <!--Botones borrar generar  -->        
-         <div class="btn-group container1" role="group" aria-label="Basic example">
-            <button type="button " class="btn btn-danger" onclick="borrarTodo();" id="btBorrarTodo">Borrar </button>
-            <button type="button " class="btn btn-primary btn01" onclick="capturarTodo();" id="btGenerar">Generar</button>
-        </div> 
-
+        
     
  <!--Observaciones  -->  
  <div class="container1">
@@ -227,7 +244,9 @@
                 </div>
             </div>
         </div>
-    
+
+        
+        
     
 
 
@@ -249,7 +268,8 @@
     <input id="000" type="hidden" value="0000000000000000000">
     <input id="consulta_equipo" type="hidden" value="http://10.100.66.199:8082/RepEquiposDireccion.aspx">
     <input id="ubi" type="hidden" value="UBICGENCPE">
-    
+
+    <script src="codigo_cmi1.js"></script>
     <script src="procesos.js"></script>
     <script src="arris.js"></script>
     <script src="mac.js"></script>  

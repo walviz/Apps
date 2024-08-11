@@ -9,7 +9,7 @@ btnDeleteGuiones.addEventListener('click',()=>{
 
 // eliminar espacios y :
 limpiarEntrada(Caso);
-limpiarEntrada(CC);
+limpiarEntrada(dian1);
 limpiarEntrada(IdLlamada);
 limpiarEntrada(Celular);
 limpiarEntrada(Legado);
@@ -75,7 +75,7 @@ function deliteTextbox(param,param2){
 
 //borra todo
 function borrarTodo(){
-  var elementos= ["Caso","Nombre","IdLlamada","switch1","NE","Celular","Legado","CC","Legado2","observaciones","nota","Correo","Direccion"];
+  var elementos= ["Caso","Nombre","IdLlamada","switch1","NE","Celular","Legado","dian1","Legado2","observaciones","nota","Correo","Direccion"];
 
   for(let i=0;i<elementos.length;i++){
     var item=elementos[i];
@@ -83,6 +83,8 @@ function borrarTodo(){
   }
   document.getElementById("guiones").selectedIndex = "";
   document.getElementById("nota").value = "Usuaria se contacta indicando que ";
+  document.getElementById("dian2").value = "";
+
 }
 
 //generar
