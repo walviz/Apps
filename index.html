@@ -55,7 +55,7 @@
 <!--nombre -->
         <div class="input-group container-input container1">
             <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Nombre')" id="btNombre">Nombre</button>
-            <input type="text" class="form-control" placeholder="Nombre" aria-label="Recipient's username with two button addons" id="Nombre" onkeyup="mayus(this);">
+            <input type="text" class="form-control" placeholder="Nombre(Mayusculas automaticas)" aria-label="Recipient's username with two button addons" id="Nombre" onkeyup="mayus(this);">
             <button class="btn btn-danger" type="button" onclick="deliteTextbox('Nombre')"><i class="bi bi-trash3-fill"></i></button>
             
         </div>
@@ -67,7 +67,7 @@
 
             <input type="text" class="form-control w-50" placeholder="Cedula / nit  " onkeyup="cm1_tecla2()" onpaste="cm1_tecla2()" id="dian1">
 
-            <input type="text" id="dian2" class="form-control " style="width:15px; font-size:16px;" maxlength="15" >
+            <input type="text" id="dian2" class="form-control " style="width:15px;" maxlength="15" >
 
             <button class="btn btn-danger" type="button" onclick="deliteTextbox('dian1','dian2')"><i class="bi bi-trash3-fill"></i></button>
             
@@ -97,7 +97,10 @@
         <div class="input-group container-input container1">
             <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Celular')" id="btCelular">Celular</button>
             <input type="text" class="form-control" placeholder="Nuemro de Celular " aria-label="Recipient's username with two button addons" id="Celular">
-            <button class="btn btn-danger" type="button" onclick="deliteTextbox('Celular')"><i class="bi bi-trash3-fill"></i></button>
+
+            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Fijo','btIDServicio','ID servicio')" id="btFijo" style="width: 30px; padding: 0px;">Fijo</button>
+            <input type="text" class="form-control" placeholder="Telefono fijo " aria-label="Recipient's username with two button addons" id="Fijo" onkeyup="mayus(this);">
+            <button class="btn btn-danger" type="button" onclick="deliteTextbox('Celular','Fijo')"><i class="bi bi-trash3-fill"></i></button>
             
         </div>
 
@@ -122,11 +125,20 @@
         <div class="input-group container-input container1">
             <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Legado','btIDServicio','ID servicio')" id="btIDServicio">ID servicio</button>
             <input type="text" class="form-control" placeholder="Id servicio " aria-label="Recipient's username with two button addons" id="Legado" onkeyup="mayus(this);">
-            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Legado2','btIDServicio','ID servicio')" id="btIDServicio2" style="width: 30px; padding: 0px;">ID</button>
+            <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('Legado2','btIDServicio','ID servicio')" id="btIDServicio2" style="width: 30px; padding: 0px;">S/N</button>
             <input type="text" class="form-control" placeholder="SERIAL/MAC " aria-label="Recipient's username with two button addons" id="Legado2" onkeyup="mayus(this);">
             <button class="btn btn-danger" type="button" onclick="deliteTextbox('Legado','Legado2')" ><i class="bi bi-trash3-fill" ></i></button>
             
         </div>
+
+
+<!--ID servicio 2  -->
+<div class="input-group container-input container1">
+    <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('acp')" id="btnAcp">ACP-</button>
+    <input type="text" class="form-control" placeholder="ACP- " aria-label="Recipient's username with two button addons" id="acp" onkeyup="mayus(this);">
+    <button class="btn btn-danger" type="button" onclick="deliteTextbox('acp')" ><i class="bi bi-trash3-fill" ></i></button>
+    
+</div>
 
 <!--swich mpls  -->
         <div class="input-group container-input container1">
@@ -155,18 +167,18 @@
 
      <!--Botones borrar generar  -->        
      <div class="btn-group container1" role="group" aria-label="Basic example">
-        <button type="button " class="btn btn-danger" onclick="borrarTodo();" id="btBorrarTodo">Borrar </button>
-        <button type="button " class="btn btn-primary btn01" onclick="capturarTodo();" id="btGenerar">Generar</button>
+        <button type="button " class="btn btn-danger" onclick="borrarTodo();" id="btBorrarTodo">Borrar todo </button>
+        <button type="button " class="btn btn-primary btn01" onclick="copyToClipBoard('nota')" id="btGenerar">↑↑ Copiar Notas ↑↑</button>
     </div> 
 
 
 
             <!--Despegable  -->
         <div class="input-group container-input container1">
-            <button type="button " class="btn btn-success" onclick="copyToClipBoard('observaciones','btGuion','Guion')" id="btGuion">Guion</button>
+            <button type="button " class="btn btn-success " onclick="copyToClipBoard('observaciones','btGuion','Guion')" id="btGuion" style="width: 100px; padding: 0px;">Copiar guion</button>
             <select class="form-select" aria-label="Default select example" onchange="selecion()" id="guiones">
                 <option value="s">--Guiones--</option>
-                <option value=0>RESOLUCIÓN</option>
+                <option value=0 style="color: red;">RESOLUCIÓN*</option>
                 <option value="1">N1-DIAG. BÁSICO(interno)</option>
                 <option value="2">N1-DIAG. AVANZADO(interno)</option>
                 <option value="3">N1-LLAMADA-ENTRANTE(Public)</option>
@@ -186,7 +198,7 @@
 
 
    <!--Plantilla no modificable  --> 
-        <div class="container1">
+        <div class="container1" style="display: none;">
             <textarea class="form-control" id="plantilla" rows="5" name="plantilla" readonly></textarea>
         </div>
 

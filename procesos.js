@@ -75,7 +75,7 @@ function deliteTextbox(param,param2){
 
 //borra todo
 function borrarTodo(){
-  var elementos= ["Caso","Nombre","IdLlamada","switch1","NE","Celular","Legado","dian1","Legado2","observaciones","nota","Correo","Direccion"];
+  var elementos= ["Caso","Nombre","IdLlamada","switch1","NE","Celular","Legado","dian1","Legado2","observaciones","nota","Correo","Direccion","acp"];
 
   for(let i=0;i<elementos.length;i++){
     var item=elementos[i];
