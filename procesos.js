@@ -75,14 +75,14 @@ function deliteTextbox(param,param2){
 
 //borra todo
 function borrarTodo(){
-  var elementos= ["Caso","Nombre","IdLlamada","switch1","NE","Celular","Legado","dian1","Legado2","observaciones","nota","Correo","Direccion","acp"];
+  var elementos= ["Caso","Nombre","IdLlamada","switch1","NE","Celular","Legado","dian1","Legado2","observaciones","nota","Correo","Direccion","acp","anillo"];
 
   for(let i=0;i<elementos.length;i++){
     var item=elementos[i];
     document.getElementById(item).value = "";
   }
   document.getElementById("guiones").selectedIndex = "";
-  document.getElementById("nota").value = "Usuaria se contacta indicando que ";
+  document.getElementById("nota").value = "Usuario se contacta indicando que presenta fallas en el servicio de internet, afirma haber realizado descartes de primer nivel, luz led (online lost pon) encendido (fijo intermitente).";
   document.getElementById("dian2").value = "";
 
 }

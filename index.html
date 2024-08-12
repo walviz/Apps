@@ -132,11 +132,15 @@
         </div>
 
 
-<!--ID servicio 2  -->
+<!--ACP- Anillo  -->
 <div class="input-group container-input container1">
     <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('acp')" id="btnAcp">ACP-</button>
     <input type="text" class="form-control" placeholder="ACP- " aria-label="Recipient's username with two button addons" id="acp" onkeyup="mayus(this);">
-    <button class="btn btn-danger" type="button" onclick="deliteTextbox('acp')" ><i class="bi bi-trash3-fill" ></i></button>
+
+    <button class="btn btn-primary btn01" type="button" onclick="copyToClipBoard('anillo','btIDServicio','ID servicio')" id="btAnillo" style="width: 30px; padding: 0px;">Anil</button>
+    <input type="text" class="form-control" placeholder="Anillo" aria-label="Recipient's username with two button addons" id="anillo" onkeyup="mayus(this);">
+
+    <button class="btn btn-danger" type="button" onclick="deliteTextbox('acp','anillo')" ><i class="bi bi-trash3-fill" ></i></button>
     
 </div>
 
@@ -160,7 +164,7 @@
 
          <!--Notas adicionales   -->    
          <div class="container1">
-            <textarea class="form-control" id="nota" rows="10" name="nota" placeholder="Notas adicionales">Usuaria se contacta indicando que </textarea>
+            <textarea class="form-control" id="nota" rows="10" name="nota" placeholder="Notas adicionales">Usuario se contacta indicando que presenta fallas en el servicio de internet, afirma haber realizado descartes de primer nivel, luz led (online lost pon) encendido (fijo intermitente).</textarea>
         </div>
  
     
